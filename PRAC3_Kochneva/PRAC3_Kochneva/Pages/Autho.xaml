@@ -1,0 +1,69 @@
+﻿<Page x:Class="PRAC3_Kochneva.Pages.Autho"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PRAC3_Kochneva.Pages"
+      Background="#FFFFF8FB">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="300">
+
+            <!-- Pusheen -->
+            <Image Source="/Resources/лого.png"
+                   Width="100"
+                   Height="100"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"/>
+
+            <TextBlock Text="Добро пожаловать!"
+                       HorizontalAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="#684653"
+                       Margin="0,0,0,5"/>
+
+            <TextBlock Text="Pusheen"
+                       HorizontalAlignment="Center"
+                       FontSize="18"
+                       Foreground="#A56B7D"
+                       Margin="0,0,0,20"/>
+
+            <TextBlock Text="Логин:"/>
+
+            <TextBox x:Name="txtLogin"/>
+
+            <TextBlock Text="Пароль:"/>
+
+            <PasswordBox x:Name="txtPassword"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0,20,0,0">
+
+                <Button x:Name="btnEnter"
+                        Content="Войти"
+                        Click="btnEnter_Click"/>
+
+                <Button x:Name="btnEnterGuests"
+                        Content="Войти как гость"
+                        Width="160"
+                        Click="btnEnterGuests_Click"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+
+</Page>
